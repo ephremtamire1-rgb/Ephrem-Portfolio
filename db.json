@@ -1,0 +1,274 @@
+{
+  "user": {
+    "name": "Ephrem Tamire",
+    "bio": "Professional Graphics Designer specializing in brand identity, 3D visualization, and premium digital experiences.",
+    "image": "input_file_0.png",
+    "title": "Graphics Designer",
+    "socials": {
+      "instagram": "https://instagram.com/ephrem",
+      "whatsapp": "https://wa.me/251916771788",
+      "facebook": "https://facebook.com/ephrem",
+      "linkedin": "https://linkedin.com/in/ephrem",
+      "tiktok": "https://tiktok.com/@ephrem"
+    },
+    "phones": [
+      "+251 916 771 788",
+      "+251 916 314 599"
+    ],
+    "email": "ephremtamire1@gmail.com"
+  },
+  "skills": [
+    {
+      "name": "Adobe Photoshop",
+      "level": 95
+    },
+    {
+      "name": "Adobe Illustrator",
+      "level": 90
+    },
+    {
+      "name": "After Effects",
+      "level": 85
+    },
+    {
+      "name": "Blender 3D",
+      "level": 80
+    },
+    {
+      "name": "UI/UX Design",
+      "level": 88
+    }
+  ],
+  "education": [
+    {
+      "degree": "🖌️ Self-Taught Graphic Designer",
+      "institution": "Self-Learned",
+      "year": "2019 – Present",
+      "description": "I am a self-taught graphics designer who developed my skills through practice, online learning, and real-world projects. I focus on building strong visual communication through modern design principles.",
+      "keyPointsTitle": "Focus Areas:",
+      "keyPoints": [
+        "Logo & Brand Identity Design",
+        "Poster & Social Media Design",
+        "Typography & Layout Design",
+        "Advertising & Marketing Visuals"
+      ]
+    },
+    {
+      "degree": "🎓 Computer Science Degree",
+      "institution": "RAYA University",
+      "year": "2019 – 2023",
+      "description": "I studied Computer Science at RAYA University, where I built a strong foundation in computing, problem-solving, and digital systems.",
+      "keyPointsTitle": "Key Learning Areas:",
+      "keyPoints": [
+        "Programming fundamentals",
+        "Computer systems and networks",
+        "Software development basics",
+        "Problem-solving and logical thinking"
+      ]
+    },
+    {
+      "degree": "🎨 Graphics Design Training",
+      "institution": "ZWD Tech",
+      "year": "2025",
+      "description": "I completed professional training in Graphics Design, focusing on modern design tools and industry standards.",
+      "keyPointsTitle": "What I learned:",
+      "keyPoints": [
+        "Advanced logo design techniques",
+        "Branding systems and identity creation",
+        "Professional poster and advertisement design",
+        "Industry-standard design workflows"
+      ]
+    },
+    {
+      "degree": "📱 Digital Marketing Training",
+      "institution": "ZWD Tech",
+      "year": "2025",
+      "description": "I trained in digital marketing to understand how design connects with business growth and online engagement.",
+      "keyPointsTitle": "What I learned:",
+      "keyPoints": [
+        "Social media marketing strategies",
+        "Content creation for engagement",
+        "Brand promotion techniques",
+        "Digital advertising basics"
+      ]
+    },
+    {
+      "degree": "🎬 Video Editing Training",
+      "institution": "ZWD Tech",
+      "year": "2025",
+      "description": "I also trained in video editing to expand my creative skills into motion and visual storytelling.",
+      "keyPointsTitle": "What I learned:",
+      "keyPoints": [
+        "Video cutting and storytelling flow",
+        "Motion graphics basics",
+        "Color correction and grading",
+        "Short-form content editing"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "position": "🧑🎨 Freelance Graphic Designer",
+      "company": "Self-Employed",
+      "period": "2023 – Present",
+      "description": "I work as a freelance graphics designer, creating visual content for individuals, businesses, and organizations. I help clients build strong visual identities through modern, clean, and impactful design solutions.",
+      "tasks": [
+        "Logo & branding design",
+        "Social media post design",
+        "Posters, flyers, and advertisements",
+        "Custom visual identity projects"
+      ]
+    },
+    {
+      "position": "🏫 Gibson College",
+      "company": "Visual Support Specialist",
+      "period": "2025",
+      "description": "I worked as a graphic designer supporting the institution with visual content and promotional materials. This role helped me gain real institutional design experience and understand professional communication design.",
+      "tasks": [
+        "Designed posters and announcements",
+        "Created educational promotional visuals",
+        "Supported branding materials for events"
+      ]
+    },
+    {
+      "position": "🏫 American International School of Ethiopia",
+      "company": "Graphic Designer",
+      "period": "2025 – 2026",
+      "description": "I worked as a graphic designer supporting school communication and visual branding. This experience improved my ability to work in structured environments and deliver consistent professional designs.",
+      "tasks": [
+        "Designed school event posters",
+        "Created digital announcements",
+        "Supported branding for school activities",
+        "Developed visual materials for students and staff"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "title": "Graphics Design Training Certificate",
+      "issuer": "ZWD Tech",
+      "year": "2025",
+      "image": "https://picsum.photos/seed/cert1/800/600"
+    },
+    {
+      "title": "Digital Marketing Mastery",
+      "issuer": "ZWD Tech",
+      "year": "2025",
+      "image": "https://picsum.photos/seed/cert2/800/600"
+    },
+    {
+      "title": "Video Editing & Motion Graphics",
+      "issuer": "ZWD Tech",
+      "year": "2025",
+      "image": "https://picsum.photos/seed/cert3/800/600"
+    }
+  ],
+  "services": [
+    {
+      "title": "🧠 1. Brand Identity Design",
+      "desc": "Creating unique and memorable visual identities for modern brands.",
+      "image": "https://picsum.photos/seed/brand/800/600",
+      "offerings": [
+        "Logo design (modern & minimalist)",
+        "Brand color palette",
+        "Typography selection",
+        "Full brand guideline system"
+      ],
+      "focus": "👉 Best for: Businesses, startups, personal brands"
+    },
+    {
+      "title": "📱 2. Social Media Design",
+      "desc": "Engagement-driven post designs, stories, and covers for Instagram, FB, and TikTok.",
+      "image": "https://picsum.photos/seed/social/800/600",
+      "offerings": [
+        "Instagram post design",
+        "Facebook banners & ads",
+        "TikTok thumbnails",
+        "Carousel post design"
+      ],
+      "focus": "👉 Focus: Eye-catching marketing visuals"
+    },
+    {
+      "title": "🖼️ 3. Poster & Flyer Design",
+      "desc": "Professional billboard, flyer, and web banner designs that demand attention.",
+      "image": "https://picsum.photos/seed/poster/800/600",
+      "offerings": [
+        "Event posters",
+        "Business flyers",
+        "Advertising banners",
+        "Promotional graphics"
+      ],
+      "focus": "👉 Focus: High-conversion marketing designs"
+    },
+    {
+      "title": "🧾 4. Business Design Materials",
+      "desc": "Professional corporate identity through high-quality print and digital materials.",
+      "image": "https://picsum.photos/seed/business/800/600",
+      "offerings": [
+        "Business cards",
+        "Letterheads",
+        "ID cards",
+        "Brochures & company profiles"
+      ],
+      "focus": "👉 Focus: Professional corporate identity"
+    },
+    {
+      "title": "🛍️ 5. Advertising Design",
+      "desc": "Sales-driven creative visuals designed to convert and grow your business.",
+      "image": "https://picsum.photos/seed/ad/800/600",
+      "offerings": [
+        "Product promotion posters",
+        "Digital ad creatives",
+        "Campaign visuals",
+        "Marketing banners"
+      ],
+      "focus": "👉 Focus: Sales-driven design for businesses"
+    },
+    {
+      "title": "✨ 6. Custom Graphic Design",
+      "desc": "Flexible creative services for unique client requests and custom design work.",
+      "image": "https://picsum.photos/seed/custom/800/600",
+      "offerings": [
+        "Any custom design work",
+        "Unique client requests",
+        "Creative visual solutions"
+      ],
+      "focus": "👉 Focus: Flexible creative service"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Cyberpunk Branding",
+      "description": "A complete visual identity for a futuristic streetwear brand.",
+      "image": "https://picsum.photos/seed/cyber/1200/800",
+      "category": "Branding"
+    },
+    {
+      "id": "2",
+      "title": "Abstract 3D Motion",
+      "description": "3D experimental motion graphics for a music festival.",
+      "image": "https://picsum.photos/seed/motion/1200/800",
+      "category": "Motion"
+    },
+    {
+      "id": "3",
+      "title": "Eco-Friendly Packaging",
+      "description": "Sustainable minimalist packaging for a luxury skincare line.",
+      "image": "https://picsum.photos/seed/eco/1200/800",
+      "category": "Graphics"
+    }
+  ],
+  "messages": [
+    {
+      "sender": "Guest",
+      "text": "Hello",
+      "isAdmin": false,
+      "timestamp": "2026-04-20T09:29:03.368Z",
+      "id": "1776677343368"
+    }
+  ],
+  "settings": {
+    "theme": "light"
+  }
+}

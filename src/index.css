@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg: #f1f5f9; /* Slate 100 tint, distinctly non-white */
+  --fg: #0f172a; /* Slate 900 */
+  --fg-muted: #475569; /* Slate 600 */
+  --accent: #06b6d4;
+  --panel-bg: rgba(255, 255, 255, 0.9);
+  --panel-border: rgba(15, 23, 42, 0.1);
+  --glass-shadow: 0 30px 60px -12px rgba(15, 23, 42, 0.15);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #030303;
+  --fg: #ffffff; 
+  --fg-muted: #ffffff;
+  --panel-bg: rgba(255, 255, 255, 0.04);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --accent: #22d3ee;
+  --glass-shadow: 0 40px 100px -20px rgba(0, 0, 0, 1);
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: -1;
+  transition: background 0.7s ease;
+}
+
+.dark .atmosphere {
+  background: 
+    radial-gradient(circle at 80% 20%, #0f172a 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, #1e1b4b 0%, transparent 50%);
+}
+
+.premium .atmosphere {
+  background: 
+    radial-gradient(circle at 70% 30%, #457b9d 0%, transparent 50%),
+    radial-gradient(circle at 30% 70%, #1d3557 0%, transparent 50%);
+}
+
+.glass-panel {
+  background: var(--panel-bg);
+  backdrop-filter: blur(24px);
+  border: 1px solid var(--panel-border);
+  border-radius: 28px;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-text {
+  @apply font-black tracking-tighter;
+  background: linear-gradient(to bottom right, var(--fg), #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .hero-text {
+  background: none;
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+}
+
+/* Force white text for common tailwind color utilities when in dark mode to ensure maximum visibility */
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700,
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400,
+.dark .text-gray-900,
+.dark .text-gray-800,
+.dark .text-gray-700,
+.dark .text-gray-600,
+.dark .text-gray-500,
+.dark .text-gray-400,
+.dark .text-zinc-900,
+.dark .text-zinc-800,
+.dark .text-zinc-700,
+.dark .text-zinc-600,
+.dark .text-zinc-500,
+.dark .text-zinc-400 {
+  color: #ffffff !important;
+}
+
+.premium .hero-text {
+  background: linear-gradient(to bottom right, #f1faee, #a8dadc);
+}
+
+.neon-glow {
+  @apply shadow-[0_0_40px_rgba(6,182,212,0.1)] dark:shadow-[0_0_50px_rgba(6,182,212,0.2)];
+}
+
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
