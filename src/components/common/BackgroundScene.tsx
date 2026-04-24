@@ -83,17 +83,6 @@ function PlexusBackground() {
 
   return (
     <group>
-      <points ref={pointsRef}>
-        <bufferGeometry>
-          <bufferAttribute 
-            attach="attributes-position" 
-            count={MAX_POINTS} 
-            array={positions} 
-            itemSize={3} 
-          />
-        </bufferGeometry>
-        <pointsMaterial transparent color="#22d3ee" size={0.06} sizeAttenuation={true} depthWrite={false} />
-      </points>
       <lineSegments ref={lineRef}>
         <bufferGeometry>
           <bufferAttribute 

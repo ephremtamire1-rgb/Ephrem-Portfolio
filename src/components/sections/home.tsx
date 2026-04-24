@@ -62,23 +62,48 @@ export const Home: React.FC<HomeProps> = ({ dbData, setChatOpen, setActiveTab })
       </div>
 
       <div className="col-span-12 md:col-span-5 lg:col-span-6 relative flex items-center justify-center md:justify-end">
-        <div className="project-card-container transform md:rotate-y-[-15deg] md:rotate-x-[10deg] transform-style-3d w-full max-w-md">
-          <Card3D className="aspect-[4/5] p-2" glow>
-            <motion.img 
-              whileHover={{ 
-                rotateY: 180, 
-                filter: "grayscale(0%)"
-              }}
-              transition={{ duration: 0.8, ease: "circOut" }}
-              src="input_file_0.png" 
-              alt="Ephrem Tamire" 
-              className="w-full h-full object-cover rounded-2xl grayscale transition-all duration-1000 cursor-pointer"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute top-8 right-8 text-white/20 font-black text-6xl tracking-tighter select-none pointer-events-none">
-              AETHER
+        <div className="relative w-full max-w-lg">
+          {/* Top-Left Overlap - Larger and more defined */}
+          <motion.div 
+            initial={{ opacity: 0, x: -50, y: -50, rotate: -20 }}
+            animate={{ opacity: 1, x: 0, y: 0, rotate: -10 }}
+            transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+            className="absolute -top-20 -left-10 w-44 h-56 z-20 rounded-3xl overflow-hidden glass-panel p-2 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] hidden sm:block border border-white/10"
+          >
+            <img src="https://picsum.photos/seed/home_landscape/600/800" className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity p-4 flex items-end">
+               <span className="text-[8px] text-white font-black tracking-widest uppercase">Abstract I</span>
             </div>
-          </Card3D>
+          </motion.div>
+
+          <div className="project-card-container transform md:rotate-y-[-15deg] md:rotate-x-[10deg] transform-style-3d w-full relative z-10 transition-transform duration-700">
+            <Card3D className="aspect-[4/5] p-3" glow>
+              <motion.img 
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.8, ease: "circOut" }}
+                src="/img/input_file_0.png" 
+                alt="Ephrem Tamire" 
+                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute bottom-8 left-8 text-white/40 font-black text-6xl tracking-tighter select-none pointer-events-none uppercase">
+                AETHER
+              </div>
+            </Card3D>
+          </div>
+
+          {/* Bottom-Right Overlap - Larger and more defined */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50, y: 50, rotate: 20 }}
+            animate={{ opacity: 1, x: 0, y: 0, rotate: 10 }}
+            transition={{ delay: 0.7, duration: 1, ease: "easeOut" }}
+            className="absolute -bottom-20 -right-10 w-48 h-64 z-20 rounded-3xl overflow-hidden glass-panel p-2 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] hidden sm:block border border-white/10"
+          >
+            <img src="https://picsum.photos/seed/home_portrait/600/800" className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity p-4 flex items-end">
+               <span className="text-[8px] text-white font-black tracking-widest uppercase">Abstract II</span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

@@ -66,7 +66,7 @@ export const Skill: React.FC<SkillProps> = ({ dbData, setActiveTab, setPortfolio
             <motion.img 
               whileHover={{ rotateY: -180, filter: "brightness(1.2)" }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              src="input_file_2.png" 
+              src="/img/input_file_2.png" 
               className="w-full h-full object-cover cursor-pointer" 
             />
          </Card3D>
