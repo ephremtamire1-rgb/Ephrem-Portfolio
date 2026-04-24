@@ -30,7 +30,7 @@ export const Contact: React.FC<ContactProps> = ({ dbData, setChatOpen }) => {
               filter: "grayscale(0%)"
             }}
             transition={{ duration: 0.8, ease: "circOut" }}
-            src="/img/input_file_3.png" 
+            src="https://raw.githubusercontent.com/ephremtamire1-rgb/Ephrem-Portfolio/main/public/img/Efa%201.png" 
             className="w-full h-full object-cover grayscale opacity-50 hover:opacity-100 transition-all duration-700 cursor-pointer" 
             alt="Contact Landscape" 
           />

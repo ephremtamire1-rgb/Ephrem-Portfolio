@@ -85,7 +85,7 @@ export const Home: React.FC<HomeProps> = ({ dbData, setChatOpen, setActiveTab })
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.8, ease: "circOut" }}
-                src="public/img/Efa1.png" 
+                src="https://github.com/ephremtamire1-rgb/Ephrem-Portfolio/blob/81112377c947940943ae11401becbbd5a04e8ac2/public/img/Efa1.png" 
                 alt="Ephrem Tamire" 
                 className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer"
                 referrerPolicy="no-referrer"
