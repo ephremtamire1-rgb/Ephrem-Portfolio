@@ -266,9 +266,25 @@
       "isAdmin": false,
       "timestamp": "2026-04-20T09:29:03.368Z",
       "id": "1776677343368"
+    },
+    {
+      "sender": "AI Assistant",
+      "text": "Hello! I am the AI Assistant for Ephrem Tamire. While Ephrem is currently in the studio crafting some 3D masterpieces, I am here to help you with project inquiries and cost estimations. \n\nHow can I assist you today? Are you looking for help with branding, 3D visualization, UI/UX design, or perhaps some motion graphics? ✨",
+      "isAdmin": true,
+      "type": "text",
+      "id": "c57a1015-583f-4f86-b26a-2328b771f613",
+      "timestamp": "2026-04-22T04:40:19.068Z"
+    },
+    {
+      "sender": "AI Assistant",
+      "text": "Hello! I’m the AI assistant for Ephrem Tamire. Ephrem is currently busy creating some 3D masterpieces, but I’m here to help you with inquiries and project estimations.\n\nWhether you're looking for a new brand identity, high-end 3D visualizations, UI/UX design, or motion graphics, I can provide you with a rough quote and details on how we work. \n\nHow can I assist you with your project today? ✨",
+      "isAdmin": true,
+      "type": "text",
+      "id": "c107cdd7-0c8d-41be-8c0f-d71bb05a5f45",
+      "timestamp": "2026-04-22T04:40:24.346Z"
     }
   ],
   "settings": {
-    "theme": "light"
+    "theme": "dark"
   }
 }

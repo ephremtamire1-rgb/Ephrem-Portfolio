@@ -78,13 +78,28 @@ async function startServer() {
       db.messages.push(newMessage);
       await saveDB(db);
       
-      // Auto-reply logic
-      const guestMessageCount = (db.messages || []).filter((m: any) => !m.isAdmin && m.sender !== 'System').length;
-      if (guestMessageCount === 1 && !msg.isAdmin) {
+      // Auto-reply logic: Welcome message (First time or after 5 days)
+      const FIVE_DAYS = 5 * 24 * 60 * 60 * 1000;
+      const guestMessages = (db.messages || []).filter((m: any) => !m.isAdmin && m.sender !== 'System');
+      const guestMessageCount = guestMessages.length;
+      
+      let shouldWelcome = false;
+      if (guestMessageCount === 1) {
+        shouldWelcome = true;
+      } else if (guestMessageCount > 1 && !msg.isAdmin) {
+        // Find previous guest message to check gap
+        const prevMsg = guestMessages[guestMessages.length - 2];
+        const gap = new Date(newMessage.timestamp).getTime() - new Date(prevMsg.timestamp).getTime();
+        if (gap >= FIVE_DAYS) {
+          shouldWelcome = true;
+        }
+      }
+
+      if (shouldWelcome && !msg.isAdmin) {
         const welcomeMsg = {
           id: uuidv4(),
-          sender: 'System',
-          text: 'Welcome! Ephrem will talk to you when he sees your messages. Until then, enjoy exploring our website and products! 🚀',
+          sender: 'AI Assistant',
+          text: "Hello 👋\nThank you for reaching out to Ephrem Tamire Design Studio.\nI'm here to assist you while Ephrem is working on ongoing projects.\n\nCould you please tell me a bit about your project? I'd be happy to guide you and provide a rough estimate.",
           isAdmin: true,
           timestamp: new Date().toISOString(),
           type: 'text'
