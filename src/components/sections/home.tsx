@@ -30,13 +30,17 @@ export const Home: React.FC<HomeProps> = ({ dbData, setChatOpen, setActiveTab })
         
         <MotionText delay={0.3}>
           <h1 className="hero-text text-[clamp(2.5rem,15vw,6rem)] md:text-[clamp(4rem,10vw,8rem)] lg:text-[clamp(5rem,12vw,100px)] font-black tracking-tighter leading-[0.85] mb-8 uppercase text-slate-900 dark:text-white">
-            {(dbData.user?.name || 'EPHREM').split(' ')[0]}<br />{(dbData.user?.name || 'TAMIRE').split(' ')[1] || 'TAMIRE'}<span className="text-cyan-400">.</span>
+            {(dbData.user?.name || 'EPHREM').split(' ')[0]}<br />{(dbData.user?.name || 'TAMIRE').split(' ')[1] || 'TAMIRE'}<span className="text-cyan-400"></span>
           </h1>
         </MotionText>
 
         <MotionText delay={0.4}>
           <p className="text-slate-600 dark:text-white text-lg md:text-xl leading-relaxed max-w-lg mb-10 font-light">
             {dbData.user?.bio}
+            <br />
+            <br />
+            I create visually compelling designs that combine creativity, clarity, and precision. 
+            My work focuses on building strong brand identities and delivering high-quality graphics that leave a lasting impression.
           </p>
         </MotionText>
 
@@ -81,7 +85,7 @@ export const Home: React.FC<HomeProps> = ({ dbData, setChatOpen, setActiveTab })
               <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.8, ease: "circOut" }}
-                src="/img/input_file_0.png" 
+                src="public/img/Efa1.png" 
                 alt="Ephrem Tamire" 
                 className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer"
                 referrerPolicy="no-referrer"
