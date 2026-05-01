@@ -62,12 +62,13 @@ export const Skill: React.FC<SkillProps> = ({ dbData, setActiveTab, setPortfolio
         </div>
       </div>
       <div className="relative">
-         <Card3D className="aspect-square" glow>
+         <Card3D className="p-3" glow>
             <motion.img 
-              whileHover={{ rotateY: -180, filter: "brightness(1.2)" }}
+              initial={{ filter: "grayscale(100%)" }}
+              whileHover={{ filter: "grayscale(0%)", scale: 1.05 }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              src="https://raw.githubusercontent.com/ephremtamire1-rgb/Ephrem-Portfolio/main/public/img/Efa%201.png" 
-              className="w-full h-full object-cover cursor-pointer" 
+              src="https://lh3.googleusercontent.com/d/1Zrixx0U_5vEfXrVKzquCx3bcGSO9GHRS" 
+              className="w-full h-auto cursor-pointer rounded-2xl object-contain transition-all duration-1000" 
             />
          </Card3D>
       </div>

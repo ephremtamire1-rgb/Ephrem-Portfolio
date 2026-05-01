@@ -35,13 +35,14 @@ export const About: React.FC<AboutProps> = ({ setActiveTab }) => {
           </motion.div>
 
           {/* Main Portrait Card */}
-          <Card3D className="aspect-square relative z-10" glow>
+          <Card3D className="relative z-10" glow>
             <motion.img 
-              whileHover={{ scale: 1.05 }}
+              initial={{ filter: "grayscale(100%)" }}
+              whileHover={{ scale: 1.05, filter: "grayscale(0%)" }}
               transition={{ duration: 0.8, ease: "circOut" }}
-              src="https://raw.githubusercontent.com/ephremtamire1-rgb/Ephrem-Portfolio/main/public/img/Efa%201.png" 
+              src="https://lh3.googleusercontent.com/d/1kmSekjehV_3WxC12chzOR7DRjhFTsE7v" 
               alt="Ephrem Tamire Portrait" 
-              className="w-full h-full object-cover cursor-pointer grayscale hover:grayscale-0 transition-all duration-1000"
+              className="w-full h-auto cursor-pointer rounded-2xl object-contain transition-all duration-1000 shadow-2xl"
               referrerPolicy="no-referrer"
             />
           </Card3D>

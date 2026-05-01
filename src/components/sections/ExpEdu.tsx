@@ -1,13 +1,137 @@
-import React from 'react';
-import { motion } from 'motion/react';
-import { Cpu, LayoutGrid, ShieldCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Cpu, LayoutGrid, ShieldCheck, ChevronRight } from 'lucide-react';
 import { MotionText } from '../common/MotionText';
 import { Card3D } from '../common/Card3D';
 import { DBData } from '../../types';
+import { cn } from '../../lib/utils';
 
 interface ExpEduProps {
   dbData: DBData;
 }
+
+interface ExpCardProps {
+  exp: any;
+  idx: number;
+}
+
+const ExpCard: React.FC<ExpCardProps> = ({ exp, idx }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Card3D 
+      className={cn(
+        "relative p-6 sm:p-10 border-l-4 border-cyan-500 dark:border-cyan-400 group cursor-pointer transition-all bg-sky-50/20 dark:bg-white/5 backdrop-blur-md shadow-xl",
+        isOpen && "ring-1 ring-cyan-500/30"
+      )}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex flex-col gap-4">
+        <div className="flex justify-between items-start gap-4">
+          <div className="flex-1">
+            <div className="text-[10px] font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-[0.2em] mb-3">{exp.period}</div>
+            <h3 className="text-2xl font-black uppercase tracking-tighter mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors text-slate-900 dark:text-white">{exp.position}</h3>
+            <div className="text-slate-500 dark:text-gray-400 font-bold text-xs uppercase tracking-widest mb-4">{exp.company}</div>
+            <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed font-medium">
+              {exp.description}
+            </p>
+          </div>
+        </div>
+
+        <div className="pt-6 mt-2 border-t border-black/5 dark:border-white/10">
+          <button className="text-[10px] font-bold tracking-[0.3em] text-cyan-700 dark:text-cyan-400 uppercase flex items-center gap-2 mb-4 group/btn">
+            RESPONSIBILITIES & IMPACT: <ChevronRight className={cn("w-3 h-3 transition-transform duration-300", isOpen ? "rotate-90" : "")} />
+          </button>
+          
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                className="overflow-hidden"
+              >
+                {/* Description moved to main area */}
+                {exp.tasks && (
+                  <div className="space-y-3">
+                     {exp.tasks.map((task: string, tidx: number) => (
+                       <div key={tidx} className="flex items-center gap-3 text-[11px] text-slate-500 dark:text-gray-400 font-mono">
+                          <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full shrink-0" />
+                          {task}
+                       </div>
+                     ))}
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </Card3D>
+  );
+};
+
+interface EduCardProps {
+  edu: any;
+  idx: number;
+}
+
+const EduCard: React.FC<EduCardProps> = ({ edu, idx }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <Card3D 
+      className={cn(
+        "relative p-6 sm:p-10 border-l-4 border-slate-900 dark:border-white group cursor-pointer transition-all bg-slate-50/20 dark:bg-white/5 backdrop-blur-md shadow-xl",
+        isOpen && "ring-1 ring-slate-900/30 dark:ring-white/20"
+      )}
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      <div className="flex flex-col gap-4">
+        <div className="flex justify-between items-start gap-4">
+          <div className="flex-1">
+            <div className="text-[10px] font-bold text-slate-400 dark:text-gray-400 uppercase tracking-[0.2em] mb-3">{edu.year}</div>
+            <h3 className="text-2xl font-black uppercase tracking-tighter mb-2 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors text-slate-900 dark:text-white">{edu.degree}</h3>
+            <div className="text-slate-500 dark:text-gray-400 font-bold text-xs uppercase tracking-widest mb-4">{edu.institution}</div>
+            <p className="text-sm text-slate-600 dark:text-gray-300 leading-relaxed font-medium">
+              {edu.description}
+            </p>
+          </div>
+        </div>
+
+        <div className="pt-6 mt-2 border-t border-black/5 dark:border-white/10">
+          <button className="text-[10px] font-bold tracking-[0.3em] text-slate-700 dark:text-white uppercase flex items-center gap-2 mb-4 group/btn">
+            KEY LEARNING AREAS: <ChevronRight className={cn("w-3 h-3 transition-transform duration-300", isOpen ? "rotate-90" : "")} />
+          </button>
+          
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                className="overflow-hidden"
+              >
+                {/* Description moved to main area */}
+                
+                {edu.keyPoints && (
+                  <div className="space-y-3">
+                     <div className="grid grid-cols-1 gap-3">
+                       {edu.keyPoints.map((point: string, pidx: number) => (
+                         <div key={pidx} className="flex items-center gap-3 text-[11px] text-slate-500 dark:text-gray-400 font-mono italic leading-tight">
+                            <span className="text-cyan-500 shrink-0">•</span>
+                            {point}
+                         </div>
+                       ))}
+                     </div>
+                  </div>
+                )}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </Card3D>
+  );
+};
 
 export const ExpEdu: React.FC<ExpEduProps> = ({ dbData }) => {
   return (
@@ -26,24 +150,9 @@ export const ExpEdu: React.FC<ExpEduProps> = ({ dbData }) => {
             </div>
             <h2 className="text-4xl font-black uppercase tracking-tighter text-slate-900 dark:text-white">Work Experience</h2>
           </MotionText>
-          <div className="space-y-10">
+          <div className="space-y-6">
             {(dbData.experience || []).map((exp, idx) => (
-              <Card3D key={idx} className="relative p-6 sm:p-8 border-l-4 border-cyan-500 dark:border-cyan-400 group hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-                <div className="text-[10px] font-bold text-cyan-600 dark:text-cyan-400 uppercase tracking-widest mb-2">{exp.period}</div>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors text-slate-900 dark:text-white uppercase">{exp.position}</h3>
-                <div className="text-slate-500 dark:text-white font-bold text-xs uppercase tracking-widest mb-4">{exp.company}</div>
-                <p className="text-xs text-slate-600 dark:text-white leading-relaxed font-light mb-4">{exp.description}</p>
-                {exp.tasks && (
-                  <div className="space-y-2">
-                     {exp.tasks.map((task, tidx) => (
-                       <div key={tidx} className="flex items-center gap-3 text-[10px] text-slate-500 dark:text-white font-mono">
-                          <div className="w-1 h-1 bg-cyan-500 rounded-full" />
-                          {task}
-                       </div>
-                     ))}
-                  </div>
-                )}
-              </Card3D>
+              <ExpCard key={idx} exp={exp} idx={idx} />
             ))}
           </div>
         </div>
@@ -56,28 +165,9 @@ export const ExpEdu: React.FC<ExpEduProps> = ({ dbData }) => {
             </div>
             <h2 className="text-4xl font-black uppercase tracking-tighter text-slate-900 dark:text-white">Education</h2>
           </MotionText>
-          <div className="space-y-10">
+          <div className="space-y-6">
             {(dbData.education || []).map((edu, idx) => (
-              <Card3D key={idx} className="relative p-6 sm:p-8 border-l-4 border-slate-900 dark:border-white group hover:bg-black/5 dark:hover:bg-white/5 transition-all">
-                <div className="text-[10px] font-bold text-slate-400 dark:text-white uppercase tracking-widest mb-2">{edu.year}</div>
-                <h3 className="text-xl font-bold uppercase tracking-tight mb-1 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors text-slate-900 dark:text-white">{edu.degree}</h3>
-                <div className="text-slate-500 dark:text-white font-bold text-xs uppercase tracking-widest mb-4">{edu.institution}</div>
-                <p className="text-xs text-slate-600 dark:text-white leading-relaxed font-light mb-4">{edu.description}</p>
-                
-                {edu.keyPoints && (
-                  <div className="space-y-3">
-                     <div className="text-[9px] font-bold uppercase tracking-widest text-cyan-600 dark:text-cyan-400">{edu.keyPointsTitle || 'Key Highlights:'}</div>
-                     <div className="grid grid-cols-1 gap-2">
-                       {edu.keyPoints.map((point, pidx) => (
-                         <div key={pidx} className="flex items-center gap-3 text-[10px] text-slate-500 dark:text-white font-mono italic">
-                            <span className="text-slate-900 dark:text-white group-hover:opacity-100 transition-opacity">•</span>
-                            {point}
-                         </div>
-                       ))}
-                     </div>
-                  </div>
-                )}
-              </Card3D>
+              <EduCard key={idx} edu={edu} idx={idx} />
             ))}
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, Instagram, MessageCircle, Facebook, Linkedin, Video } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { MotionText } from '../common/MotionText';
 import { Card3D } from '../common/Card3D';
 import { DBData } from '../../types';
@@ -23,15 +23,17 @@ export const Contact: React.FC<ContactProps> = ({ dbData, setChatOpen }) => {
           <h2 className="text-5xl font-black uppercase tracking-tighter leading-none text-slate-900 dark:text-white">Let's Create<br />Something<br /><span className="text-cyan-400">Epic.</span></h2>
         </MotionText>
         
-        <MotionText delay={0.2} className="relative w-full aspect-video rounded-3xl overflow-hidden glass-panel border border-white/10 mb-8 shadow-2xl">
+        <MotionText delay={0.2} className="relative w-full rounded-3xl overflow-hidden glass-panel border border-white/10 mb-8 shadow-2xl p-2">
           <motion.img 
+            initial={{ filter: "grayscale(100%)", opacity: 0.7 }}
             whileHover={{ 
-              rotateY: 180,
-              filter: "grayscale(0%)"
+              scale: 1.05,
+              filter: "grayscale(0%)",
+              opacity: 1
             }}
             transition={{ duration: 0.8, ease: "circOut" }}
-            src="https://raw.githubusercontent.com/ephremtamire1-rgb/Ephrem-Portfolio/main/public/img/Efa%201.png" 
-            className="w-full h-full object-cover grayscale opacity-50 hover:opacity-100 transition-all duration-700 cursor-pointer" 
+            src="https://lh3.googleusercontent.com/d/1ojjP96iF4Jmvy-SBv4XE15JQF28fV_JV" 
+            className="w-full h-auto cursor-pointer rounded-2xl object-contain transition-all duration-1000" 
             alt="Contact Landscape" 
           />
         </MotionText>
@@ -56,20 +58,21 @@ export const Contact: React.FC<ContactProps> = ({ dbData, setChatOpen }) => {
 
         <div className="flex gap-4 pt-4">
           {[
-            { icon: Instagram, link: dbData.user?.socials?.instagram },
-            { icon: MessageCircle, link: dbData.user?.socials?.whatsapp },
-            { icon: Facebook, link: dbData.user?.socials?.facebook },
-            { icon: Linkedin, link: dbData.user?.socials?.linkedin },
-            { icon: Video, link: dbData.user?.socials?.tiktok },
+            { logo: "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg", link: dbData.user?.socials?.instagram, label: "Instagram" },
+            { logo: "https://www.vectorlogo.zone/logos/whatsapp/whatsapp-icon.svg", link: dbData.user?.socials?.whatsapp, label: "WhatsApp" },
+            { logo: "https://www.vectorlogo.zone/logos/facebook/facebook-official.svg", link: dbData.user?.socials?.facebook, label: "Facebook" },
+            { logo: "https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg", link: dbData.user?.socials?.linkedin, label: "LinkedIn" },
+            { logo: "https://www.vectorlogo.zone/logos/tiktok/tiktok-icon.svg", link: dbData.user?.socials?.tiktok, label: "TikTok" },
           ].map((s, i) => (
             <a 
               key={i} 
               href={s.link} 
               target="_blank" 
               rel="noreferrer" 
-              className="w-10 h-10 glass-panel rounded-xl flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all hover:-translate-y-1"
+              className="w-10 h-10 glass-panel rounded-xl flex items-center justify-center hover:bg-white dark:hover:bg-white transition-all hover:-translate-y-1 p-2"
+              title={s.label}
             >
-              <s.icon className="w-4 h-4" />
+              <img src={s.logo} alt={s.label} className="w-full h-full object-contain" />
             </a>
           ))}
         </div>

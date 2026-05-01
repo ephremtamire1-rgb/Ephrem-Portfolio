@@ -6,9 +6,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Menu, X, Github, Instagram, Mail, MessageSquare, LayoutGrid, User, Cpu, 
-  Send, ShieldCheck, ChevronRight, ExternalLink, Facebook, Linkedin, 
-  Twitter, MessageCircle, Video, Phone, PenTool, Share2, Monitor, Layers, Music,
+  Menu, X, MessageSquare, Cpu, 
   Sun, Moon
 } from 'lucide-react';
 import { cn } from './lib/utils';
@@ -33,7 +31,6 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [portfolioFilter, setPortfolioFilter] = useState('All');
-  const [selectedService, setSelectedService] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -265,11 +262,18 @@ export default function App() {
 
               <div className="mt-8 flex gap-4">
                 {Object.entries(dbData.user?.socials || {}).map(([key, url]: [string, any], i) => {
-                  const IconsMap: any = { instagram: Instagram, whatsapp: Phone, facebook: Facebook, linkedin: Linkedin, tiktok: Video };
-                  const Icon = IconsMap[key] || ExternalLink;
+                  const LogosMap: any = { 
+                    instagram: "https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg", 
+                    whatsapp: "https://www.vectorlogo.zone/logos/whatsapp/whatsapp-icon.svg", 
+                    facebook: "https://www.vectorlogo.zone/logos/facebook/facebook-official.svg", 
+                    linkedin: "https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg", 
+                    tiktok: "https://www.vectorlogo.zone/logos/tiktok/tiktok-icon.svg" 
+                  };
+                  const logo = LogosMap[key];
+                  if (!logo) return null;
                   return (
-                    <a key={key} href={url} target="_blank" className="text-slate-500 hover:text-white transition-colors">
-                      <Icon className="w-4 h-4" />
+                    <a key={key} href={url} target="_blank" className="w-8 h-8 p-1.5 glass-panel rounded-lg hover:bg-white transition-all flex items-center justify-center">
+                      <img src={logo} alt={key} className="w-full h-full object-contain" />
                     </a>
                   );
                 })}
@@ -291,7 +295,7 @@ export default function App() {
           )}
 
           {activeTab === 'services' && (
-            <Service dbData={dbData} selectedService={selectedService} setSelectedService={setSelectedService} />
+            <Service dbData={dbData} />
           )}
 
           {activeTab === 'portfolio' && (

@@ -2,7 +2,7 @@
   "user": {
     "name": "Ephrem Tamire",
     "bio": "Professional Graphics Designer specializing in brand identity, 3D visualization, and premium digital experiences.",
-    "image": "/img/input_file_0.png",
+    "image": "https://lh3.googleusercontent.com/d/1v1Xz6Qmf_e2-GsNMlnRxXwMyUeM8Vj6J",
     "title": "Graphics Designer",
     "socials": {
       "instagram": "https://instagram.com/ephrem",
@@ -108,7 +108,7 @@
   ],
   "experience": [
     {
-      "position": "🧑🎨 Freelance Graphic Designer",
+      "position": "Freelance Graphic Designer",
       "company": "Self-Employed",
       "period": "2023 – Present",
       "description": "I work as a freelance graphics designer, creating visual content for individuals, businesses, and organizations. I help clients build strong visual identities through modern, clean, and impactful design solutions.",
@@ -120,7 +120,7 @@
       ]
     },
     {
-      "position": "🏫 Gibson College",
+      "position": "Gibson College",
       "company": "Visual Support Specialist",
       "period": "2025",
       "description": "I worked as a graphic designer supporting the institution with visual content and promotional materials. This role helped me gain real institutional design experience and understand professional communication design.",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "position": "🏫 American International School of Ethiopia",
+      "position": "American International School of Ethiopia",
       "company": "Graphic Designer",
       "period": "2025 – 2026",
       "description": "I worked as a graphic designer supporting school communication and visual branding. This experience improved my ability to work in structured environments and deliver consistent professional designs.",
@@ -165,7 +165,7 @@
   ],
   "services": [
     {
-      "title": "🧠 1. Brand Identity Design",
+      "title": "Brand Identity Design",
       "desc": "Creating unique and memorable visual identities for modern brands.",
       "image": "https://picsum.photos/seed/brand/800/600",
       "offerings": [
@@ -174,10 +174,10 @@
         "Typography selection",
         "Full brand guideline system"
       ],
-      "focus": "👉 Best for: Businesses, startups, personal brands"
+      "focus": "Best for: Businesses, startups, personal brands"
     },
     {
-      "title": "📱 2. Social Media Design",
+      "title": "Social Media Design",
       "desc": "Engagement-driven post designs, stories, and covers for Instagram, FB, and TikTok.",
       "image": "https://picsum.photos/seed/social/800/600",
       "offerings": [
@@ -186,10 +186,10 @@
         "TikTok thumbnails",
         "Carousel post design"
       ],
-      "focus": "👉 Focus: Eye-catching marketing visuals"
+      "focus": "Focus: Eye-catching marketing visuals"
     },
     {
-      "title": "🖼️ 3. Poster & Flyer Design",
+      "title": "Poster & Flyer Design",
       "desc": "Professional billboard, flyer, and web banner designs that demand attention.",
       "image": "https://picsum.photos/seed/poster/800/600",
       "offerings": [
@@ -198,10 +198,10 @@
         "Advertising banners",
         "Promotional graphics"
       ],
-      "focus": "👉 Focus: High-conversion marketing designs"
+      "focus": "Focus: High-conversion marketing designs"
     },
     {
-      "title": "🧾 4. Business Design Materials",
+      "title": "Business Design Materials",
       "desc": "Professional corporate identity through high-quality print and digital materials.",
       "image": "https://picsum.photos/seed/business/800/600",
       "offerings": [
@@ -210,10 +210,10 @@
         "ID cards",
         "Brochures & company profiles"
       ],
-      "focus": "👉 Focus: Professional corporate identity"
+      "focus": "Focus: Professional corporate identity"
     },
     {
-      "title": "🛍️ 5. Advertising Design",
+      "title": "Advertising Design",
       "desc": "Sales-driven creative visuals designed to convert and grow your business.",
       "image": "https://picsum.photos/seed/ad/800/600",
       "offerings": [
@@ -222,10 +222,10 @@
         "Campaign visuals",
         "Marketing banners"
       ],
-      "focus": "👉 Focus: Sales-driven design for businesses"
+      "focus": "Focus: Sales-driven design for businesses"
     },
     {
-      "title": "✨ 6. Custom Graphic Design",
+      "title": "Custom Graphic Design",
       "desc": "Flexible creative services for unique client requests and custom design work.",
       "image": "https://picsum.photos/seed/custom/800/600",
       "offerings": [
@@ -233,7 +233,7 @@
         "Unique client requests",
         "Creative visual solutions"
       ],
-      "focus": "👉 Focus: Flexible creative service"
+      "focus": "Focus: Flexible creative service"
     }
   ],
   "projects": [

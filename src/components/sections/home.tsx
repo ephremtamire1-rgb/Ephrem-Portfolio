@@ -81,13 +81,14 @@ export const Home: React.FC<HomeProps> = ({ dbData, setChatOpen, setActiveTab })
           </motion.div>
 
           <div className="project-card-container transform md:rotate-y-[-15deg] md:rotate-x-[10deg] transform-style-3d w-full relative z-10 transition-transform duration-700">
-            <Card3D className="aspect-[4/5] p-3" glow>
+            <Card3D className="p-3" glow>
               <motion.img 
-                whileHover={{ scale: 1.05 }}
+                initial={{ filter: "grayscale(100%)" }}
+                whileHover={{ scale: 1.05, filter: "grayscale(0%)" }}
                 transition={{ duration: 0.8, ease: "circOut" }}
-                src="https://github.com/ephremtamire1-rgb/Ephrem-Portfolio/blob/81112377c947940943ae11401becbbd5a04e8ac2/public/img/Efa1.png" 
+                src="https://lh3.googleusercontent.com/d/1jo1FlRwFYjUFbPWrI7MdOzhs1pOJXazg" 
                 alt="Ephrem Tamire" 
-                className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-1000 cursor-pointer"
+                className="w-full h-auto rounded-2xl cursor-pointer object-contain shadow-2xl transition-all duration-1000"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute bottom-8 left-8 text-white/40 font-black text-6xl tracking-tighter select-none pointer-events-none uppercase">

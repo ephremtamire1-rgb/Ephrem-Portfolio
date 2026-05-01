@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import gsap from 'gsap';
 import { cn } from '../../lib/utils';
 
-export function Card3D({ children, className, glow }: { children: React.ReactNode, className?: string, glow?: boolean }) {
+export function Card3D({ children, className, glow, onClick }: { children: React.ReactNode, className?: string, glow?: boolean, onClick?: () => void }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -17,8 +17,8 @@ export function Card3D({ children, className, glow }: { children: React.ReactNod
     const y = e.clientY - rect.top;
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    const rotateX = (y - centerY) / 20;
-    const rotateY = (centerX - x) / 20;
+    const rotateX = (y - centerY) / 12;
+    const rotateY = (centerX - x) / 12;
 
     gsap.to(cardRef.current, {
       rotateX,
@@ -39,9 +39,10 @@ export function Card3D({ children, className, glow }: { children: React.ReactNod
 
   return (
     <div 
-      className="perspective-1200 group"
+      className={cn("perspective-1200 group", onClick && "cursor-pointer")}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onClick={onClick}
     >
         <div
           ref={cardRef}
